@@ -314,6 +314,39 @@ ul {
   display: block;
 }
 
+.exemples-list .item{
+  position: relative;
+}
+
+.exemples-box{
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+
+}
+
+.examples-text{
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  
+  
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  
+}
+
 /* наша команда */
 
 .img-team {
@@ -588,6 +621,42 @@ ul {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.thumb{
+  position: relative;
+}
+
+.overlay{
+  display: inline-block;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9)
+  
+}
+
+.overlay-text{
+  margin: 0px;
+  padding: 63px 24px;
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 3%;
+  color: var(--adress-color);
+}
+
+.portfolio-list:hover .item .overlay{
+  opacity: 1;
+}
+
+.overlay:focus{
+  opacity: 1;
+}
+
 /* footer */
 
 .mail-footer {
@@ -670,8 +739,9 @@ ul {
   margin-right: 70px;
 }
 
-.list-link-team {
+.list-link-team-footer {
   padding: 0px;
+  display: flex;
 }
 
 .icon-link-footer {
@@ -699,4 +769,55 @@ ul {
 
 .link-team-footer {
   background-color: rgba(255, 255, 255, 0, 1);
+}
+
+/* Модальное окно */
+
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.1);
+  
+}
+
+.backdrop.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 528px;
+  height: 581px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.btn-close{
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  transform: translate(-120%, 120% );
+  
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+}
+
+.btn-close-img{
+  fill: #fff;
+  stroke:  rgba(0, 0, 0, 0.1);
 }
